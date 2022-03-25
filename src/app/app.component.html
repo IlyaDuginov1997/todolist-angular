@@ -1,3 +1,12 @@
 <h1>{{title}}</h1>
 
+<button (click)="toggle = !toggle">Toggle</button>
+<button (click)="toggle = 111">Set value = 111</button>
+
+<div [ngSwitch]="toggle">
+  <p *ngSwitchCase="true" class="red">Lorem ipsum.</p>
+  <p *ngSwitchCase="false" class="blue">Lorem ipsum mierv.</p>
+  <p *ngSwitchDefault>Lorem ipsum dolor sit amet..</p>
+</div>
+
 
