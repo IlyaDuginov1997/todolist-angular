@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
 
 export type Post = {
-  name: string
+  title: string
   text: string
-  id: number
+  id?: number
 }
 
 @Component({
@@ -15,8 +15,12 @@ export type Post = {
 export class AppComponent {
   title = 'todolist'
 
+  onAddPost(post: Post) {
+    this.posts.unshift(post)
+  }
+
   posts: Post[] = [
-    {name: 'Ilya', text: 'I want to have a work', id: 1},
-    {name: 'Artem', text: 'I like programming process with React', id: 2},
+    {title: 'JS', text: 'I want to learn JavaScript', id: 1},
+    {title: 'Angular', text: 'I like programming process with Angular', id: 2},
   ]
 }
