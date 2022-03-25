@@ -1,9 +1,6 @@
-<input type="text" [(ngModel)]="title">
-<button (click)="backgroundToggle = !backgroundToggle">Toggle</button>
+<button (click)="paragrahpChange = !paragrahpChange">Change paragraph</button>
 
-<h1 [ngClass]="{
- red: backgroundToggle,
-  blue: !backgroundToggle
- }">{{title}}</h1>
-
-
+<p *ngIf="paragrahpChange; else otherParagraph">{{title}}</p>
+<ng-template #otherParagraph>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+</ng-template>
