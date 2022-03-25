@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todolist';
+
+  arr = [1, 1, 2, 3, 5, 7, 13]
+
+  obj = [
+    {name: 'Ilya', age: 25, friends: ['Ilya', 'Nikita', 'Max', 'Artem']},
+    {name: 'Max', age: 30, friends: ['Ilya', 'Nikita', 'Dima', 'Artem']}
+  ]
 }

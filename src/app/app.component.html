@@ -1,3 +1,19 @@
 <h1>{{title}}</h1>
 
+<!--<ul>-->
+<!--  <li *ngFor="let number of arr; let idx = index">-->
+<!--    <strong>Index - {{idx + 1}}</strong>-->
+<!--    <strong>Number - {{number}} </strong>-->
+<!--  </li>-->
+<!--</ul>-->
 
+<ul>
+  <li *ngFor="let person of obj">
+    {{person.name}}
+    <ol>
+      <li *ngFor="let friends of person.friends ">
+        {{friends}}
+      </li>
+    </ol>
+  </li>
+</ul>
